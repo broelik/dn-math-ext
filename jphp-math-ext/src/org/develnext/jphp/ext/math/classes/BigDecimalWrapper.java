@@ -1,7 +1,6 @@
 package org.develnext.jphp.ext.math.classes;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.math.RoundingMode;
 
 import org.develnext.jphp.ext.math.MathExtension;
@@ -147,7 +146,7 @@ public class BigDecimalWrapper extends BaseWrapper<BigDecimal>
 	@Signature
 	public BigDecimalWrapper multiply(Environment env, BigDecimalWrapper val)
 	{
-		return new BigDecimalWrapper(env, getWrappedObject().min(val.getWrappedObject()));
+		return new BigDecimalWrapper(env, getWrappedObject().multiply(val.getWrappedObject()));
 	}
 	@Signature
 	public BigDecimalWrapper multiply(Environment env, BigDecimalWrapper val, MathContextWrapper context)
