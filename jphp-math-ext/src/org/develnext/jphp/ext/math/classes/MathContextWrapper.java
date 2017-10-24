@@ -33,7 +33,7 @@ public class MathContextWrapper extends BaseWrapper<MathContext>
 	@Signature
 	public void __construct(int setPrecision, String setRoundingMode)
 	{
-		__wrappedObject = new MathContext(setPrecision, RoundingMode.valueOf("setRoundingMode"));
+		__wrappedObject = new MathContext(setPrecision, RoundingMode.valueOf(setRoundingMode));
 	}
 	
 	@Getter
